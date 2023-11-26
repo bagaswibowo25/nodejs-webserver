@@ -5,8 +5,8 @@ metadata:
   namespace: mysite
 spec:
   deploymentName: "mysite"
-  canaryImage: "bagas25/mysite:v2"
-  mainImage: "bagas25/mysite:v1"
+  canaryImage: "bagas25/mysite:2.0"
+  mainImage: "bagas25/mysite:1.0"
   performRollout: false
   performRollback: false
   splitPercentage: 100
