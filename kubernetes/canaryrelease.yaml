@@ -1,0 +1,13 @@
+apiVersion: release.example.com/v1
+kind: CanaryRelease
+metadata:
+  name: mysite-canary-release
+  namespace: mysite
+spec:
+  deploymentName: "mysite"
+  canaryImage: "bagas25/mysite:v2"
+  mainImage: "bagas25/mysite:v1"
+  performRollout: false
+  performRollback: false
+  splitPercentage: 100
+  totalReplicas: 10
