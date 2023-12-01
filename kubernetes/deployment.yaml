@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: landing-page
+  name: mysite
   namespace: mysite
   labels:
-    app: landing-page
+    app: mysite
     version: main
 spec:
   selector:
     matchLabels:
-      app: landing-page
+      app: mysite
       version: main
   template:
     metadata:
       labels:
-        app: landing-page
+        app: mysite
         version: main
     spec:
       containers:
       - name: webstore
-        image: bagas25/landing-page:v3
+        image: bagas25/mysite:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80

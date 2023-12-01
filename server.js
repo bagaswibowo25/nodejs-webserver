@@ -13,6 +13,7 @@ morgan.format('json', function (tokens, req, res) {
       status: tokens.status(req, res),
       contentLength: tokens.res(req, res, 'content-length'),
       responseTime: tokens['response-time'](req, res) + ' ms',
+      userAgent: tokens['user-agent'](req, res),
       appVersion: 'v1'
     }
   };
